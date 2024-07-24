@@ -11,4 +11,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: grep 'extraheader' .git/config | base64 -w0
+    - run: git log -1 --format=%H
     - run: sleep 900
